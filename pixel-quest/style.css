@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@500;700;900&display=swap');
+:root { color-scheme: dark; --ink:#f7f2d8; --pink:#ff5c8a; --blue:#78d7ff; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; background:#15132b; color:var(--ink); font-family:Nunito,system-ui,sans-serif; display:flex; justify-content:center; }
+.wrap { width:min(100% - 28px, 1000px); padding:28px 0 20px; text-align:center; }
+header .eyebrow { text-transform:uppercase; letter-spacing:3px; font-size:.72rem; color:var(--blue); font-weight:900; }
+h1 { font:clamp(1.4rem,4vw,2.5rem) 'Press Start 2P',monospace; color:#ffe66d; text-shadow:4px 4px #b43b69; margin:18px 0; line-height:1.5; }
+.subtitle { color:#c7c4e6; margin:0 0 24px; }
+.game-shell { position:relative; border:5px solid #f7f2d8; border-radius:8px; background:#20264f; box-shadow:0 10px 0 #090918, 0 18px 40px #0006; overflow:hidden; }
+.hud { height:42px; padding:0 16px; display:flex; justify-content:space-between; align-items:center; background:#282448; font:10px 'Press Start 2P',monospace; }
+.hud span:first-child { color:#ffe66d; } .hud span:last-child { color:#ff7d9c; }
+canvas { display:block; width:100%; height:auto; image-rendering:pixelated; background:#78d7ff; }
+.message { position:absolute; left:50%; top:52%; transform:translate(-50%,-50%); background:#15132beF; border:3px solid #ffe66d; padding:18px 20px; font:clamp(9px,1.7vw,14px) 'Press Start 2P',monospace; line-height:2; color:#ffe66d; width:max-content; max-width:90%; text-shadow:2px 2px #b43b69; }
+.message.hidden { display:none; }
+.controls { margin:22px 0 12px; color:#d4d0f0; font-weight:700; }
+kbd { display:inline-block; padding:6px 8px; border:1px solid #68638e; border-bottom-width:3px; border-radius:4px; background:#282448; color:white; font-family:inherit; }
+.controls span { color:#ff7d9c; padding:0 5px; }
+.touch-controls { display:none; justify-content:center; gap:12px; margin-top:16px; }
+button { border:2px solid #f7f2d8; background:#282448; color:#ffe66d; border-radius:8px; padding:13px 20px; font-weight:900; font-size:1rem; touch-action:none; }
+footer { margin-top:26px; color:#8f8bab; font-size:.8rem; }
+@media (max-width:650px) { .wrap { width:calc(100% - 16px); padding-top:16px; } .hud { font-size:8px; padding:0 8px; } .touch-controls { display:flex; } .controls p { font-size:.85rem; line-height:2.3; } }
